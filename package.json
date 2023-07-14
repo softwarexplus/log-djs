@@ -1,0 +1,20 @@
+{
+  "name": "log-djs",
+  "version": "0.0.1",
+  "description": "A library that allows to log every server activities for discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwarexplus/log-djs.git"
+  },
+  "keywords": ["discord","discord.js"],
+  "author": "SoftwareX Plus <SoftwareXPlus@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softwarexplus/log-djs/issues"
+  },
+  "homepage": "https://github.com/softwarexplus/log-djs#readme"
+}
