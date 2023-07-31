@@ -1,0 +1,19 @@
+# folders
+/node_modules
+/out
+/.upm
+/.config
+
+# file extensions
+*.log
+*.debug
+
+# environment variables
+.env
+.env.local
+.env.*.local
+
+# file
+.replit
+replit.nix
+package-lock.json
