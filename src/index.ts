@@ -1,1 +1,1 @@
-export * from "./utils/message";
+export * from "./config"
