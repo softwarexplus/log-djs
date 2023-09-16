@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.4] - 2023-09-16
-
-> Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5
+## 0.0.5
+- Date: 2023-09-16
+- Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5
 
 ### Added
 
@@ -19,9 +19,9 @@ All notable changes to this project will be documented in this file.
 
 -   Bug Fix
 
-## [0.0.5-beta] - 2023-09-14
-
-> Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5-beta
+## 0.0.5-beta
+- Date: 2023-09-16
+- Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5-beta
 
 ### Added
 
