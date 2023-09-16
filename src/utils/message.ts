@@ -2,7 +2,7 @@ import { Client, ChannelType, Message } from "discord.js"
 import axios from "axios"
 import Payload from "./../payload"
 
-export default function log(client: Client, webhook: string) {
+export default function log(client: Client, webhook: string, ignore?: Array<string>) {
     client.on("messageCreate", (message: Message) => {
         logMessage(message, "Status: Create")
     })
@@ -15,20 +15,44 @@ export default function log(client: Client, webhook: string) {
         logMessage(message, "Status: Delete")
     })
 
-    function logMessage(message: Message, messageStatus: string) {
-        if (message.channel.type === ChannelType.DM || message.embeds?.length || !message.content) return
+    function logMessage(message: Message, Status: string) {
+        let x: string
+        let NotAllow: boolean = false
+
+        if (ignore?.length) {
+            for (const x of ignore) {
+                if (x === message.channelId) {
+                    NotAllow = true
+                }
+            }
+        }
+
+        if (message.channel.type === ChannelType.DM || NotAllow) return
+        if (message.embeds?.length && message.content) {
+            x = `${message.content} \n${JSON.stringify(message.embeds)}`
+        } else if (message.embeds?.length && !message.content) {
+            x = JSON.stringify(message.embeds)
+        } else if (!message.embeds?.length && message.content) {
+            x = message.content
+        } else {
+            return
+        }
 
         try {
             const Payload: Payload = {
                 embeds: [
                     {
-                        title: `Message from ${message.author.username}`,
-                        description: message.content,
+                        description: x,
                         color: 0x5865f2,
                         fields: [
                             {
+                                name: "Author",
+                                value: `${message.author.username} | ${message.author.id}`
+                            },
+                            {
                                 name: `Server`,
-                                value: `${message.guild.name} | ${message.guild.id}`
+                                value: `${message.guild.name} | ${message.guild.id}`,
+                                inline: true
                             },
                             {
                                 name: `Channel`,
@@ -36,11 +60,12 @@ export default function log(client: Client, webhook: string) {
                             },
                             {
                                 name: `Author`,
-                                value: `${message.author.username} | ${message.author.id}`
+                                value: `${message.author.username} | ${message.author.id}`,
+                                inline: true
                             },
                             {
                                 name: `Message`,
-                                value: `${message.id} | ${messageStatus}`
+                                value: `${message.id} | ${Status} | [Go to the message](${message.url}) `
                             }
                         ]
                     }
