@@ -1,39 +1,28 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
- 
-## [Unreleased] - yyyy-mm-dd
- 
-Here we write upgrading notes for brands. It's a team effort to make them as
-straightforward as possible.
- 
+
+## [1.2.4] - 2023-09-16
+
+> Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5
+
 ### Added
-- [PROJECTNAME-XXXX](http://tickets.projectname.com/browse/PROJECTNAME-XXXX)
-  MINOR Ticket title goes here.
-- [PROJECTNAME-YYYY](http://tickets.projectname.com/browse/PROJECTNAME-YYYY)
-  PATCH Ticket title goes here.
- 
+
+-   `ignore` is a new property in config function
+
 ### Changed
- 
+
+-   Added log embed as a raw JSON
+-   Edit README.md
+
 ### Fixed
- 
-## [1.2.4] - 2017-03-15
-  
-Here we would have the update steps for 1.2.4 for people to follow.
- 
+
+-   Bug Fix
+
+## [0.0.5-beta] - 2023-09-14
+
+> Full Changelog: https://github.com/softwarexplus/log-djs/commits/0.0.5-beta
+
 ### Added
- 
-### Changed
-  
-- [PROJECTNAME-ZZZZ](http://tickets.projectname.com/browse/PROJECTNAME-ZZZZ)
-  PATCH Drupal.org is now used for composer.
- 
-### Fixed
- 
-- [PROJECTNAME-TTTT](http://tickets.projectname.com/browse/PROJECTNAME-TTTT)
-  PATCH Add logic to runsheet teaser delete to delete corresponding
-  schedule cards.
- 
-## [0.0.4] - 2023-09-14
- 
-### Added
-> Add log config function
+
+-   Add log config function
