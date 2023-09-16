@@ -1,6 +1,6 @@
 {
     "name": "log-djs",
-    "version": "0.0.5-beta",
+    "version": "0.0.5",
     "description": "A library that allows to log every server activities for discord bot.",
     "main": "out/src/index.js",
     "scripts": {
