@@ -37,20 +37,17 @@ const { Client, GatewayIntentBits } = require("discord.js")
 const { config } = require("log-djs")
 
 const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent
-    ]
+    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 })
 
 config({
-    client: client,
-    webhook: "YOUR_WEBHOOK_TOKEN",
-    message: true
+    client: client, // (Require) Client object - type (Client)
+    webhook: "YOUR_WEBHOOK_TOKEN", // (Require) Webhook Token - type (string)
+    message: true, // (Optional) Can it log message - type (boolean) - default (false)
+    ignore: ["CHANNEL_ID"] // (Optional) Ignore channel id - type (Array<string>) - default (empty)
 })
 
-client.login("YOUR_TOKEN_HERE");
+client.login("YOUR_TOKEN_HERE")
 ```
 
 #### For ECMAScript modules:
@@ -61,22 +58,21 @@ import { Client, GatewayIntentBits } from "discord.js"
 import { config } from "log-djs"
 
 const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent
-    ]
+    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 })
 
 config({
-    client: client,
-    webhook: "YOUR_WEBHOOK_TOKEN",
-    message: true
+    client: client, // (Require) Client object - type (Client)
+    webhook: "YOUR_WEBHOOK_TOKEN", // (Require) Webhook Token - type (string)
+    message: true, // (Optional) Can it log message - type (boolean) - default (false)
+    ignore: ["CHANNEL_ID"] // (Optional) Ignore channel id - type (Array<string>) - default (empty)
 })
 
-client.login("YOUR_TOKEN_HERE");
+client.login("YOUR_TOKEN_HERE")
 ```
 
-## Support 
+## Support
+
 ---
+
 > If you have any problems or any questions ask us on our [Support Server](https://dsc.gg/SoftwareXPlus)
