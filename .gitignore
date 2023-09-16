@@ -18,3 +18,4 @@
 replit.nix
 package-lock.json
 pnpm-lock.yaml
+.npmrc
