@@ -7,7 +7,7 @@ export default function log(client: Client, webhook: string, ignore?: Array<stri
         logMessage(message, "Status: Create")
     })
 
-    client.on("messageUpdate", (oldMessage: Message, newMessage: Message) => {
+    client.on("messageUpdate", (_oldMessage: Message, newMessage: Message) => {
         logMessage(newMessage, "Status: Edit")
     })
 
