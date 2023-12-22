@@ -6,6 +6,7 @@
     "author": "SoftwareX Plus <SoftwareXPlus@gmail.com>",
     "homepage": "https://github.com/softwarexplus/log-djs#readme",
     "license": "MIT",
+    "type": "commonjs",
     "scripts": {
         "test": "tsc --noEmit"
     },
@@ -30,5 +31,9 @@
     "funding": {
         "type": "patreon",
         "url": "https://www.patreon.com/SoftwareXPlus"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "discord.js": "^14.14.1"
     }
 }
