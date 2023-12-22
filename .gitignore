@@ -5,6 +5,7 @@
 /.config
 
 # file extensions
+*.js
 *.log
 *.debug
 
